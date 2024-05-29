@@ -10,6 +10,7 @@ namespace TestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiKeyAuthorize]
     public class RegisterController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;

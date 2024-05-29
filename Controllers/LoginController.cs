@@ -6,11 +6,13 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TestAPI.Models;
+using TestAPI.Utils;
 
 namespace TestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiKeyAuthorize]
     public class LoginController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
